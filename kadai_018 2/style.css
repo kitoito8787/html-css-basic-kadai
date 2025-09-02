@@ -1,0 +1,97 @@
+#top {
+  width: 800px;
+  /* 横幅を800pxに設定 */
+  background-color: #dcc9f4;
+  /* 背景色を指定 */
+  margin: 20px auto;
+  /* 上下に20px、左右は自動で中央寄せ */
+  text-align: center;
+  /* 子要素のpを中央揃え */
+}
+.top-child {
+  display: inline-block;
+  /* 横並びにする */
+  width: 20%;
+  /* 親要素の20%の幅にする */
+  background-color: #ffd9df;
+  /* 背景色を設定 */
+  margin: 10px 0;
+  /* 上下に10pxの余白を足して見やすく（お好みで調整できます） */
+}
+#middle {
+  width: 800px;
+  /* 横幅を800pxに指定 */
+  height: 800px;
+  /* 高さを800pxに指定 */
+  background-color: #ffd9df;
+  /* 指定の背景色 */
+  margin: 20px auto;
+  /* 上下20pxの余白、左右は中央寄せ */
+}
+#middle-child01,
+#middle-child02,
+#middle-child03 {
+  width: 200px;
+  /* 横幅200px */
+  height: 200px;
+  /* 高さ200px */
+  background-color: #87ceeb;
+  /* 指定の背景色 */
+}
+#middle {
+  /* 既存の指定にこれを追加 */
+  position: relative;
+}
+
+#middle-child01,
+#middle-child02,
+#middle-child03 {
+  position: absolute;
+  /* 他はそのまま */
+}
+
+#middle-child01 {
+  top: 100px;
+  left: 100px;
+}
+
+#middle-child02 {
+  top: 300px;
+  left: 300px;
+}
+
+#middle-child03 {
+  top: 500px;
+  left: 500px;
+}
+#bottom {
+  width: 800px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: #87ceeb;
+  position: relative;
+  /* 子要素のposition:absolute用に追加 */
+}
+
+/* 3つの下段の子要素共通の装飾 */
+#bottom-child01,
+#bottom-child02,
+#bottom-child03 {
+  width: 400px;
+  height: 100px;
+  background-color: #e5dcf0;
+  position: relative;
+  /* relativeに変更して、上下は自動配置に任せる */
+  margin-bottom: 0;
+  /* 必要に応じて調整。隙間がほしければmargin-bottom:10px等 */
+}
+
+/* 2つ目の要素だけ、通常位置から右へ200pxずらす */
+#bottom-child02 {
+  left: 200px;
+}
+
+/* 3つ目の要素だけ、通常位置から右へ400pxずらす */
+#bottom-child03 {
+  left: 400px;
+}
