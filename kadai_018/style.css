@@ -80,24 +80,18 @@
   width: 400px;
   height: 100px;
   background-color: #e5dcf0;
-  position: absolute;
-  /* 配置調整のため追加 */
-  left: 0;
-  /* デフォルトの位置 */
-}
-#bottom-child01 {
-  top: 0;
-  left: 0;
+  position: relative;
+  /* relativeに変更して、上下は自動配置に任せる */
+  margin-bottom: 0;
+  /* 必要に応じて調整。隙間がほしければmargin-bottom:10px等 */
 }
 
+/* 2つ目の要素だけ、通常位置から右へ200pxずらす */
 #bottom-child02 {
-  top: 100px;
   left: 200px;
-  /* 本来位置から200px右へずらす */
 }
 
+/* 3つ目の要素だけ、通常位置から右へ400pxずらす */
 #bottom-child03 {
-  top: 200px;
   left: 400px;
-  /* 本来位置から400px右へずらす */
 }
