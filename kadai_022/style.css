@@ -1,0 +1,94 @@
+body,h1,p {
+  margin: 0;
+}
+p,a {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+header h1 {
+  color: rgb(255, 255, 255);
+}
+
+main {
+  margin: 10px;
+}
+#parent {
+  display: flex;
+  justify-content: space-between;
+}
+.contents {
+  border: 3px solid rgb(238, 204, 204);
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+  margin-right: 8px;
+}
+
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+/* footer全体のスタイル */
+footer {
+  background-color: rgb(244, 79, 79);
+  /* 背景色 */
+  text-align: center;
+  /* 中身を中央揃え */
+  padding: 15px;
+  /* 少し余白を追加（見栄え向上用） */
+}
+
+/* footer内のa要素 */
+footer a {
+  color: rgb(255, 255, 255);
+  /* 通常時の文字色（白） */
+  text-decoration: none;
+  /* 下線を消したい場合は追加 */
+}
+
+/* 訪問済みリンク */
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+/* ホバー時 */
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+    /* h2のフォントサイズを30pxに */
+  }
+
+  p {
+    font-size: 25px;
+    /* pのフォントサイズを25pxに */
+  }
+
+  #parent {
+    flex-direction: column;
+    /* Flexアイテムを縦並びにする */
+  }
+}
